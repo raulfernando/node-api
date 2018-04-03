@@ -3,9 +3,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const config = require('./config.js')
 
 // Conecta com o DB
-mongoose.connect('mongodb://raul:raul@ds023664.mlab.com:23664/node-api')
+mongoose.connect(config.connection)
 
 const app = express()
 const router = express.Router()
